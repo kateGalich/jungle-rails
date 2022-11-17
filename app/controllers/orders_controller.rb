@@ -3,17 +3,6 @@ class OrdersController < ApplicationController
   def show
     @order = Order.find(params[:id])
 
-    enhanced_order.each do |entry|
-      pp entry
-      product = entry[:product]
-      quantity = entry[:quantity]
-      order.line_items.new(
-        product: product,
-        quantity: quantity,
-        item_price: product.price,
-        total_price: product.price * quantity
-      )
-    end
   end
 
   def create
