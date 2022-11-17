@@ -1,4 +1,6 @@
 class Admin::ProductsController < ApplicationController
+    # Require authentication only for edit and delete operation
+    before_action :authenticate
 
   def index
     @products = Product.order(id: :desc).all
@@ -37,4 +39,10 @@ class Admin::ProductsController < ApplicationController
     )
   end
 
+  private
+  def authenticate
+     authenticate_or_request_with_http_basic do |id, password| 
+        id == ENV['USER_ID'] && password == ENV['PASSWORD']
+     end
+  end
 end
