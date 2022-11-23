@@ -1,6 +1,6 @@
 # Jungle
 
-A mini e-commerce application built with Rails 6.1 for purposes of teaching Rails by example.
+A mini application built with Rails 6.1 for purposes of practicing Rails.
 
 ## Setup
 
@@ -29,3 +29,6 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 - Bootstrap 5
 - PostgreSQL 9.x
 - Stripe
+
+![Alt text](docs/category_page.png)
+![Alt text](docs/product_page.png)
